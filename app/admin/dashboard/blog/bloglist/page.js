@@ -8,6 +8,7 @@ import { BsTrash3 } from 'react-icons/bs';
 import { AiFillEdit } from 'react-icons/ai';
 
 const BlogList = () => {
+  // Comment to get Auth
   const { auth } = useAuth();
 
   const [blogs, setBlogs] = useState([]);
