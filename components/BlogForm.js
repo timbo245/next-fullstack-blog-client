@@ -61,7 +61,7 @@ const BlogForm = params => {
           }
         );
         toast.success('Blog created successfully.');
-        router.push('/');
+        router.push('/admin');
       } catch (error) {
         console.log(error);
         toast.error(error.response.data.error);
