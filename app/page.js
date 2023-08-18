@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import BlogCard from '@/components/BlogCard';
 
 const fecthBlogs = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API}/blogs`, {
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API}/blogs`, {
     next: {
       revalidate: 1
     }
