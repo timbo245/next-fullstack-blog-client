@@ -4,12 +4,12 @@ import axios from 'axios';
 import BlogCard from '@/components/BlogCard';
 
 const fecthBlogs = async () => {
-  const response = await axios.get(`${process.env.NEXT_PUBLIC_API}/blogs`, {
+  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/blogs`, {
     next: {
       revalidate: 1
     }
   });
-  const data = await response.json();
+
   return data;
 };
 
